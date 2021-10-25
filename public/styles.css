@@ -1,0 +1,12 @@
+body{
+  font-family: 'VT323', monospace;
+  color: rgb(215, 208, 228);
+  background-image: url('images/Black\ with\ Pixel\ Illustrations\ Video\ Games\ Cool\ Presentation.png');
+  background-size: cover;
+  width: 600px;
+  margin-top: 200px;
+  padding-left: 300px;
+}
+h3{
+  margin-top: 40px;
+}

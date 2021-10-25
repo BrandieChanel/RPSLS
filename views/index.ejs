@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>RPSLS</title>
+  <link rel="icon" 
+  type="image/png" 
+  href="/Images/RPSLS.PNG">
+  <link rel="shortcut icon" href="/public/Images/RPSLS.PNG">
+  <link rel="stylesheet" href="font-awesome.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  
+  <h1>Rock Paper Scissors Lizard Spock</h1>
+
+<span>A Bot has challenged You to a Game!
+</span>
+<div id="selections">
+  <button class="selection" data-selection="lizard">🦎</button>
+  <button class="selection" data-selection="rock">rock</button>
+  <button class="selection" data-selection="spock">spock</button>
+  <button class="selection" data-selection="scissors">scissors</button>
+  <button class="selection" data-selection="paper">paper</button>
+</div>
+<span id="outcome"></span>
+<div class="results">
+  <p id="userChoice"></p>
+  <p id="cpuChoice"></p>
+  <p id="resultOut"></p>
+</div>
+
+  <h3>High Scores</h3>
+  <ul class="messages">
+  <% for(var i=0; i<messages.length; i++) {%>
+    <li class="message">
+      <span><%= messages[i].name %></span>
+      <span><%= messages[i].msg %></span>
+      <span><%= messages[i].thumbUp %></span>
+      <span><i class="fa fa-thumbs-up" aria-hidden="true"></i></span>
+      <span><i class="fa fa-thumbs-down" aria-hidden="true"></i></span>
+      <span><i class="fa fa-trash" aria-hidden="true"></i></span>
+    </li>
+  <% } %>
+  </ul>
+
+  <h2>Submit your name and Score</h2>
+
+  <form action="/messages" method="POST">
+    <input type="text" placeholder="name" name="name">
+    <input type="text" placeholder="score" name="msg">
+    <button type="submit">Submit</button>
+  </form>
+
+  <script src="main.js"></script>
+
+</body>
+</html>
